@@ -1,0 +1,207 @@
+html {
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #7c59b0;
+    --boarder-radius: 5px;
+}
+
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color:var(--primary-color);
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%239C92AC' fill-opacity='0.27'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container-bookmark {
+    margin: 15px 0 0 15px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 30px;
+}
+
+.bookmark-toggle {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    opacity: 0.8;
+    padding-top: 12px;
+    cursor: pointer;
+}
+
+.container-bookmark:hover {
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+
+
+.item {
+    margin-left: 10px;
+    display: inline-block;
+    width: 150px;
+    padding-top: 15px;
+}
+
+
+
+.name {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: var(--boarder-radius); 
+    padding: 2px;
+    color: #FFF;
+}
+
+.name a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+a:link, 
+a:visited {
+color: white;
+text-decoration: none;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+.name:hover {
+    background-color: rgba(0, 0, 0, 0.5);  
+}
+
+.name img {
+    height: 20px;
+    width: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    vertical-align: sub;
+}
+
+.remove {
+  display: inline;
+  float: right;
+  padding: 2px;
+  padding-right: 4px;
+  vertical-align: sub;
+}
+
+.item-exit {
+    margin-left: 10px;
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    padding-top: 12px;
+}
+.name-exit {
+    background-color: rgba(0, 0, 0, 0.3); 
+    border-radius: var(--boarder-radius); 
+    padding: 2px 4px 2px 4px;
+    color: #FFF;
+}
+
+/* Modal */
+.modal-container {
+    background: rgba(0,0,0,0.6);
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.show-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.8);
+    max-width: 95%;
+    width: 500px;
+    animation: modalopen 1s;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.close-icon {
+    float: right;
+    color: white;
+    font-size: 24px;
+    position: relative;
+    top: 13px;
+    right: 13px;
+    cursor: pointer;
+}
+
+.modal-header {
+     background: var(--primary-color);
+     color: white;
+     padding: 15px;
+}
+
+h3 {
+    margin: 0;
+}
+
+.modal-content {
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+/* From */
+
+.form-group {
+    height: 55px;
+}
+
+.form-input {
+    width: 97%;
+    padding: 5px;
+    border: 2px solid var(--primary-color);
+    border-radius: var(--boarder-radius);
+    display: block;
+    outline: none;
+}
+
+.form-label {
+    color: var(--primary-color);
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    color: white;
+    background: var(--primary-color);
+    height: 30px;
+    width: 100px;
+    border: none;
+    border-radius: var(--boarder-radius);
+    margin-top: 10px;
+}
+
+button:hover {
+    filter: brightness(110%);
+}
+
+button:focus {
+    outline: none;
+}
